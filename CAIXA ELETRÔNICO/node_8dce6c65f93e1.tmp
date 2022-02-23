@@ -1,0 +1,3 @@
+let din = 500
+for (let f1 = 20; f1 < din; f1--)
+console.log(f1)
