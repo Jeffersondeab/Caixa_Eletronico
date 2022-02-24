@@ -96,6 +96,11 @@
 
     }
 
+    .fim{
+        display: flex;
+        justify-content: space-between;
+    }
+
     .fim > a:hover{
         background-color: rgb(63, 61, 61);
     }
@@ -139,6 +144,7 @@
 
     <div class="fim">
         <a href="index.html">Encerrar operação</a>
+         <a href="index2.html">Retornar a opções</a>
     </div>
 
     <div id="res">
@@ -148,16 +154,17 @@
 
 
     <script>
+
+        let valor = 500
+
+
         function resul(){
-            var f1 = window.document.getElementById('f1')
+            var f = window.document.getElementById('f1')
             var res = window.document.getElementById('res')
-            din = 500
-            f1 = 20
-            if( f1 <= din{
-                f1 -= din
-                res.innerHTML = `${din}`
-                
-            }
+            window.location.href = 'index4.html'
+            valor = valor - 20
+            res.innerHTML = valor
+             
         }
     </script>
     
