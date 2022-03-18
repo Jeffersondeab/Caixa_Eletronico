@@ -34,12 +34,14 @@
         padding: 10vh;
     }
 
-    fieldset{
+    form{
+        width: 80vh;
+        border: solid 1px gray;
         padding: 10vh;
         background-color:white;
     }
 
-    fieldset > p, #senha, input{
+    form > p, #senha, input{
         display: flex;
         margin: auto;
         justify-content: center;
@@ -52,7 +54,7 @@
         
     }
 
-    fieldset > p{
+    form > p{
         line-height: 10vh;
     }
 
@@ -62,15 +64,51 @@
     }
 
 
-    @media(max-width: 1000px){
-    fieldset{
-         width: 20vh;
+ 
+
+    @media(max-width: 700px){
+    
+        form p{
+            font-size: 3vh;
+        }
+
+        form{
+        width:60vh;
+        padding: 5vh;
     }
 
-    header h1{
-        text-align: center;
-        color: white;
+        #senha{
+        width: 30vh;
     }
+} 
+
+
+@media(max-width: 300px){
+    
+    header h1{
+        font-size: 5vh;
+    }
+
+    form p{
+        font-size: 2.5vh;
+    }
+
+    form{
+    width:30vh;
+    padding: 2vh;
+}
+
+    #senha{
+    width: 25vh;
+}
+
+    #botao{
+        width: 20vh;
+        height: 5vh;
+        font-size: 3vh;
+}
+
+
 } 
 
 
@@ -85,12 +123,12 @@
 
  <section id="painel">
 
-        <fieldset id="flogin">
+        <form id="flogin">
             <p>Favor inserir a senha</p>
             <input type="password" name="senha" id="senha"> <br>
-            <input type="button" value="entrar" onclick="entrar()">
+            <input type="button" value="entrar" id="botao" onclick="entrar()">
             <div id="erro"></div>
-        </fieldset>
+        </form>
 
  </section>
 
