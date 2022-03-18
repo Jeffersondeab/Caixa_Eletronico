@@ -11,7 +11,6 @@
         margin: 0%;
         padding: 0%;
         font-family: sans-serif;
-    
     }
 
     body{
@@ -20,12 +19,12 @@
 
     header > h1 {
         text-align: center;
-        color: rgb(255, 255, 255);
+        color: white;
     }
 
     section p{
         font-weight: bold;
-        color: rgb(255, 255, 255);
+        color: white;
         margin: 10vh;
     }
 
@@ -38,24 +37,24 @@
 
     section > ul > li > a {
         text-decoration: none;
-        color: rgb(255, 255, 255);
+        color: white;
         font-weight: bold;
         background-color: rgba(63, 61, 61, 0.541);
         padding: 3vh;
         padding-right: 50vh;
         border-radius: 5vh;
-
-        
     }
+
+
 
     section > ul > li > a:hover{
         transition: 0.2s all;
         background-color: rgb(63, 61, 61);
-       
     }
 
+
     .fim > a{
-        color: rgb(255, 255, 255);
+        color: white;
         font-weight: bold;
         display: flex;
         margin: auto;
@@ -66,11 +65,48 @@
         width: 40vh;
         border-radius: 5vh;
     }
+    
 
     .fim > a:hover{
         background-color: rgb(63, 61, 61);
 
     }
+
+
+    @media(max-width:840px){
+        header > h1 {
+        text-align: center;
+        color: white;
+        font-size: 5vh;
+    }
+
+    section p{
+        font-weight: bold;
+        color: white;
+        margin: 10vh;
+    }
+
+    section > ul > li {
+        list-style: none;
+        line-height: 3vh;
+        margin: 10vh;
+    }
+
+    section > ul > li > a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        background-color: rgba(63, 61, 61, 0.541);
+        padding: 3vh;
+        padding-right: 5vh;
+        border-radius: 5vh;
+    }
+
+    .fim > a{
+        width: 35vh;
+    }
+ 
+}
     
 
 </style>
@@ -89,8 +125,6 @@
             <li><a href="index3.html">Depósito</a></li>
             <li><a href="index3.html">Transferência</a></li>
         </ul>
-
-
      </section>
      
      <div class="fim">
