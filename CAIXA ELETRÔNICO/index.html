@@ -45,11 +45,11 @@
         justify-content: center;
         font-weight: bold;
         font-size: 5vh;
-        
     }
 
     input {
         background-color: rgba(63, 61, 61, 0.541);
+        
     }
 
     fieldset > p{
@@ -62,11 +62,16 @@
     }
 
 
+    @media(max-width: 1000px){
+        #painel{
+        width: 70vh;
+    }
 
-     @media(max-width: 00px){
-
-
-    } 
+    header h1{
+        text-align: center;
+        color: white;
+    }
+} 
 
 
 </style>
@@ -78,7 +83,7 @@
     </h1>
  </header>
 
- <section>
+ <section id="painel">
 
         <fieldset id="flogin">
             <p>Favor inserir a senha</p>
