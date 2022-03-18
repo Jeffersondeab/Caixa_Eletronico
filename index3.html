@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa eletrônico </title>
+</head>
+
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+        font-family: sans-serif;
+        font-weight: bold;
+    }
+
+    body{
+        background-color:rgb(4, 42, 65);
+    }
+
+    header > h1{
+        text-align: center;
+        color: rgb(255, 255, 255);
+        line-height: 10vh;
+    }
+
+    #container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "seção1 seção2";
+    }
+
+    
+    #saldo{
+        margin-left: 30vh;
+        font-size: 4vh;
+        color: rgb(255, 255, 255);
+    }
+ 
+
+    section > ul > li > a{
+        display: flex;
+        justify-content: center;
+        margin: 10vh;
+        font-size: 5vh;
+        background-color: rgba(63, 61, 61, 0.541);
+        border-radius: 5vh;
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        padding: 10px;
+        
+    }
+
+
+   ul > li > a:hover{
+        background-color: rgb(63, 61, 61);
+        transition: 0.3s;
+    }
+
+    #seção1{
+        grid-area: seção1;
+        list-style: none;
+    }
+
+
+    #seção2{
+        grid-area: seção2;
+        list-style: none;
+    }
+
+ 
+    #adnum{
+        display: flex;
+        justify-content: center;
+    }
+
+
+    #outrovalor{
+        width: 80vh;
+        padding: 15px;
+        outline: 0;
+        border-radius: 5vh;
+        border: none;
+        font-size: bold;
+    }
+
+    .fim > a{
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        background-color: rgba(63, 61, 61, 0.541);
+        width: 40vh;
+        padding: 3vh;
+        border-radius: 5vh;
+        margin-top: 3vh;
+
+    }
+
+    .fim{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .fim > a:hover{
+        background-color: rgb(63, 61, 61);
+    }
+
+    #retdin{
+        display: flex;
+        justify-content: center;
+        margin: 5px;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        background-color: rgba(63, 61, 61, 0.541);
+        width: 40vh;
+        padding: 3vh;
+        border-radius: 5vh;
+        margin-top: 3vh;
+        cursor: pointer;
+        border: none;
+        font-weight: bold;
+        font-size: 20px;
+        
+    }
+
+    #retdin:hover{
+        background-color: rgb(63, 61, 61);
+    }
+
+
+</style>
+
+
+<body>
+
+    <header>
+        <h1>Selecione a opção desejada</h1>
+    </header>
+
+    <main>
+
+        <div id="saldo">
+            Saldo: R$500
+        </div>
+        
+    <div id="container"> 
+            <section >
+            <ul id="seção1">
+                <li><a id="f1" href="#" onclick="valor20()" >R$20</a></li>
+                <li><a id="f2" href="#" onclick="valor50()">R$50</a></li>
+                <li><a id="f3" href="#" onclick="valor100()">R$100</a></li>
+            </ul>
+        </section>
+
+        <section  >
+            <ul id="seção2">
+                <li><a id="f4" href="#" onclick="valor200()">R$200</a></li>
+                <li><a id="f5" href="#" onclick="valor400()">R$400</a></li>
+                <li><a id="f6" href="#" onclick="valor500()">R$500</a></li>
+            </ul>
+        </section>
+ 
+       
+    </div>
+        
+    
+    <div id="adnum"> 
+        <input type="number" name="valor" id="outrovalor" placeholder="Outro valor" min="1">
+    </div>
+
+    <div class="fim">
+        <a href="index.html">Encerrar operação</a>
+        <button id="retdin" onclick="bsaque()">Saque</button>
+         <a href="index2.html">Retornar a opções</a>
+
+    </div>
+
+ 
+    </main>
+
+
+    <script>
+
+        let valor = 500
+        let f = window.document.getElementById('f1')
+        let saldo = window.document.getElementById('saldo')
+        let outrovalor = window.document.getElementById('outrovalor')
+        
+
+
+        function valor20(){ 
+            valor = valor - 20
+            saldo.textContent = ' Saldo: R$' + valor
+            if(valor <= 0 ){
+                saldo.style.color = 'red'
+            }
+            
+             
+        }
+
+        function valor50(){
+            valor = valor - 50
+            saldo.textContent = ` Saldo: R$`+ valor
+            if(valor <= 0 ){
+                saldo.style.color = 'red'
+            }
+
+        }
+
+        function valor100(){
+            valor = valor - 100
+            saldo.textContent = 'Saldo: R$'+ valor
+            if(valor <= 0 ){
+                saldo.style.color = 'red'
+            }
+        }
+
+        function valor200(){
+            valor = valor - 200
+            saldo.textContent = 'Saldo: R$'+ Valor
+            if(valor <= 0 ){
+                saldo.style.color = 'red'
+            }
+        }
+
+        function valor400(){
+            valor = valor - 400
+            saldo.textContent = 'Saldo: R$'+ valor
+            if(valor <= 0 ){
+                saldo.style.color = 'red'
+            }
+        }
+
+        function valor500(){
+            
+            valor = valor - 500
+            saldo.textContent = 'Saldo: R$'+ valor
+            if(valor <= 0 ){
+                saldo.style.color = 'red'
+            }
+        }
+
+        function bsaque(){
+            num = Number(outrovalor.value)
+            valor = valor - num
+            saldo.textContent = 'Saldo: R$'+ valor
+            if(valor <= 0 ){
+                saldo.style.color = 'red'
+            }
+       
+        }
+
+    </script>
+    
+</body>
+</html>
