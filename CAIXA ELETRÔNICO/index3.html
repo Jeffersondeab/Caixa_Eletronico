@@ -242,23 +242,23 @@ section > ul> li > a{
     <main>
 
         <div id="saldo">
-            Saldo: R$500
+            Saldo: R$ 500,00
         </div>
         
     <div id="container"> 
             <section >
             <ul id="seção1">
-                <li><a id="f1" href="#" onclick="valor20()" >R$20</a></li>
-                <li><a id="f2" href="#" onclick="valor50()">R$50</a></li>
-                <li><a id="f3" href="#" onclick="valor100()">R$100</a></li>
+                <li><a id="f1" href="#" onclick="valor20()"> R$ 20,00</a></li>
+                <li><a id="f2" href="#" onclick="valor50()"> R$ 50,00</a></li>
+                <li><a id="f3" href="#" onclick="valor100()">R$ 100,00</a></li>
             </ul>
         </section>
 
         <section  >
             <ul id="seção2">
-                <li><a id="f4" href="#" onclick="valor200()">R$200</a></li>
-                <li><a id="f5" href="#" onclick="valor400()">R$400</a></li>
-                <li><a id="f6" href="#" onclick="valor500()">R$500</a></li>
+                <li><a id="f4" href="#" onclick="valor200()">R$ 200,00</a></li>
+                <li><a id="f5" href="#" onclick="valor400()">R$ 400,00</a></li>
+                <li><a id="f6" href="#" onclick="valor500()">R$ 500,00</a></li>
             </ul>
         </section>
  
@@ -292,7 +292,7 @@ section > ul> li > a{
 
         function valor20(){ 
             valor = valor - 20
-            saldo.textContent = ' Saldo: R$' + valor
+            saldo.textContent = ' Saldo:' + valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'});
             if(valor <= 0 ){
                 saldo.style.color = 'red'
             }
@@ -302,7 +302,7 @@ section > ul> li > a{
 
         function valor50(){
             valor = valor - 50
-            saldo.textContent = ` Saldo: R$`+ valor
+            saldo.textContent = ` Saldo:`+ valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'});
             if(valor <= 0 ){
                 saldo.style.color = 'red'
             }
@@ -311,7 +311,7 @@ section > ul> li > a{
 
         function valor100(){
             valor = valor - 100
-            saldo.textContent = 'Saldo: R$'+ valor
+            saldo.textContent = 'Saldo:'+ valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'});
             if(valor <= 0 ){
                 saldo.style.color = 'red'
             }
@@ -319,7 +319,7 @@ section > ul> li > a{
 
         function valor200(){
             valor = valor - 200
-            saldo.textContent = 'Saldo: R$'+ Valor
+            saldo.textContent = 'Saldo:'+ valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'});
             if(valor <= 0 ){
                 saldo.style.color = 'red'
             }
@@ -327,7 +327,7 @@ section > ul> li > a{
 
         function valor400(){
             valor = valor - 400
-            saldo.textContent = 'Saldo: R$'+ valor
+            saldo.textContent = 'Saldo:'+ valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'});
             if(valor <= 0 ){
                 saldo.style.color = 'red'
             }
@@ -336,7 +336,7 @@ section > ul> li > a{
         function valor500(){
             
             valor = valor - 500
-            saldo.textContent = 'Saldo: R$'+ valor
+            saldo.textContent = 'Saldo:'+ valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'});
             if(valor <= 0 ){
                 saldo.style.color = 'red'
             }
@@ -345,7 +345,7 @@ section > ul> li > a{
         function bsaque(){
             num = Number(outrovalor.value)
             valor = valor - num
-            saldo.textContent = 'Saldo: R$'+ valor
+            saldo.textContent = 'Saldo:'+ valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'});
             if(valor <= 0 ){
                 saldo.style.color = 'red'
             }
