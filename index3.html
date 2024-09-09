@@ -307,9 +307,8 @@ section > ul> li > a{
             if(valor <= 0 ){
                 saldo.style.color = 'red'
             }
-            
-             
         }
+        
 
         function valor50(){
             valor = valor - 50
@@ -347,7 +346,7 @@ section > ul> li > a{
         function valor500(){
             
             valor = valor - 500
-            saldo.textContent = 'Saldo:'+ valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'});
+            saldo.textContent = 'Saldo:' + valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'});
             if(valor <= 0 ){
                 saldo.style.color = 'red'
             }
